@@ -38,20 +38,8 @@ todo : mention missing data.
 
 ``` r
 library(dplyr)
-```
 
-    ## 
-    ## Attaching package: 'dplyr'
 
-    ## The following objects are masked from 'package:stats':
-    ## 
-    ##     filter, lag
-
-    ## The following objects are masked from 'package:base':
-    ## 
-    ##     intersect, setdiff, setequal, union
-
-``` r
 dfyearly <- dfmonthly %>%
             group_by(yyyy) %>%
             summarise(yrtmean = mean(tmean),
@@ -64,6 +52,7 @@ dfyearly <- dfmonthly %>%
 Starting to plot yearly coloured stripes using [code borrowed from
 Dominic
 Roye](https://dominicroye.github.io/en/2018/how-to-create-warming-stripes-in-r/).
+Thanks Dominic \!
 
 ``` r
 library(ggplot2)

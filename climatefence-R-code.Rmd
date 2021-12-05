@@ -13,7 +13,7 @@ The UK Meteorological Office provides near complete monthly data for Lowestoft f
 
 The data include monthly minimum and maximum temperatures, I calculated the midpoint between them for each month.
 
-```{r data-reading, include=TRUE, warning=FALSE}
+```{r data-reading, include=TRUE, warning=FALSE, message=FALSE}
 
 infileurl <- "https://www.metoffice.gov.uk/pub/data/weather/uk/climate/stationdata/lowestoftdata.txt"
 
@@ -39,7 +39,7 @@ Starting to calculate yearly mean from the monthly data.
 
 todo : mention missing data.
 
-```{r data-averaging, include=TRUE, warning=FALSE}
+```{r data-averaging, include=TRUE, warning=FALSE, message=FALSE}
 
 library(dplyr)
 
@@ -54,7 +54,7 @@ dfyearly <- dfmonthly %>%
 
 ```
 
-Starting to plot yearly coloured stripes using [code borrowed from Dominic Roye](https://dominicroye.github.io/en/2018/how-to-create-warming-stripes-in-r/).
+Starting to plot yearly coloured stripes using [code borrowed from Dominic Roye](https://dominicroye.github.io/en/2018/how-to-create-warming-stripes-in-r/). Thanks Dominic !
 
 ```{r first-warming-stripes, include=TRUE, warning=FALSE}
 
